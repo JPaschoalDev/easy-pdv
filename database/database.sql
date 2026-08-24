@@ -37,7 +37,7 @@ CREATE TABLE produto (
 );
 
 -- ============================================
--- TABELA: cliente
+-- TABELA: Cliente
 -- TABELA RESPONSÁVEL POR CONTROLAR OS CLIENTES E SUAS INFORMAÇÕES
 -- ============================================
 CREATE TABLE cliente (

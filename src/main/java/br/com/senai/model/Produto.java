@@ -1,4 +1,4 @@
-package br.com.senai;
+package br.com.senai.model;
 
 // CLASSE "Produto"
 // REPRESENTA UM PRODUTO DO CATÁLOGO DE VENDAS E SUAS INFORMAÇÕES (NOME, DESCRIÇÃO,  PREÇO, QAUNT. ESTOQUE)

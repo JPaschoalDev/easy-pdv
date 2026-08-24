@@ -42,6 +42,13 @@
             <version>0.4</version>
         </dependency>
 
+        <!-- org.json: biblioteca leve para ler e montar JSON,usada para interpretar a resposta da API ViaCEP -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20240303</version>
+        </dependency>
+
         <!-- Cliente HTTP simples para consumir a API ViaCEP (usaremos java.net.http nativo, mas deixamos aqui como alternativa) -->
         <!-- Não é necessária dependência extra: Java 11+ já tem java.net.http.HttpClient embutido -->
     </dependencies>
@@ -53,8 +60,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <!-- Vamos ajustar essa classe principal quando criarmos MainApp.java -->
-                    <mainClass>br.com.suaescola.MainApp</mainClass>
+                    <mainClass>br.com.senai.app.MainApp</mainClass>
                 </configuration>
             </plugin>
         </plugins>

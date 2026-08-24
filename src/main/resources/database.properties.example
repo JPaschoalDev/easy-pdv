@@ -1,0 +1,3 @@
+db.url=jdbc:mysql://localhost:3306/sistema_vendas
+db.usuario=root
+b.senha= COLOQUE-SUA-SENHA-AQUI
