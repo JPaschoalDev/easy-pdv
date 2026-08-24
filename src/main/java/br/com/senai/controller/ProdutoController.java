@@ -39,9 +39,6 @@ public class ProdutoController {
     @FXML
     private TableColumn<Produto, Integer> colunaEstoque;
 
-    @FXML
-    private TableColumn<Produto, String> colunaDescricao;
-
     private final ProdutoDAO produtoDAO = new ProdutoDAO();
 
     // "ObservableList" = LISTA INTELIGENTE QUE ATUALIZA AUTOMATICAMENTE APÓS QUALQUER MUDANÇA
@@ -59,7 +56,6 @@ public class ProdutoController {
         colunaNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
         colunaPreco.setCellValueFactory(new PropertyValueFactory<>("preco"));
         colunaEstoque.setCellValueFactory(new PropertyValueFactory<>("quantidadeEstoque"));
-        //colunaDescricao.setCellValueFactory(new PropertyValueFactory<>("descricao"));
     }
 
     // BUSCA TODOS OS PRODUTOS DO BANCO E ATUALIZA A LISTA OBSERVÁVEL

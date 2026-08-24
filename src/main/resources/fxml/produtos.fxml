@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="670.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senai.controller.ProdutoController">
    <children>
       <Label layoutX="18.0" layoutY="14.0" prefHeight="50.0" prefWidth="565.0" text="CADASTRO DE PRODUTOS" textFill="#695f5f">
@@ -16,42 +15,42 @@
             <Font name="Lucida Sans Unicode" size="29.0" />
          </font>
       </Label>
-      <Label layoutX="14.0" layoutY="115.0" text="NOME" textFill="#695f5f">
+      <Label layoutX="19.0" layoutY="114.0" text="NOME" textFill="#695f5f">
          <font>
             <Font name="Lucida Sans Unicode" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="campoNome" layoutX="148.0" layoutY="109.0" prefHeight="44.0" prefWidth="465.0">
+      <TextField fx:id="campoNome" layoutX="148.0" layoutY="109.0" prefHeight="44.0" prefWidth="465.0" promptText="Nome do Item">
          <font>
             <Font size="20.0" />
          </font>
       </TextField>
-      <Label layoutX="14.0" layoutY="168.0" text="DESCRIÇÃO" textFill="#695f5f">
+      <Label layoutX="19.0" layoutY="167.0" text="DESCRIÇÃO" textFill="#695f5f">
          <font>
             <Font name="Lucida Sans Unicode" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="campoDescricao" layoutX="148.0" layoutY="162.0" prefHeight="44.0" prefWidth="465.0">
+      <TextField fx:id="campoDescricao" layoutX="148.0" layoutY="162.0" prefHeight="44.0" prefWidth="465.0" promptText="Descrição do Item">
          <font>
             <Font size="20.0" />
          </font>
       </TextField>
-      <Label layoutX="18.0" layoutY="223.0" text="PREÇO" textFill="#695f5f">
+      <Label layoutX="19.0" layoutY="222.0" text="PREÇO" textFill="#695f5f">
          <font>
             <Font name="Lucida Sans Unicode" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="18.0" layoutY="276.0" text="ESTOQUE" textFill="#695f5f">
+      <Label layoutX="19.0" layoutY="275.0" text="ESTOQUE" textFill="#695f5f">
          <font>
             <Font name="Lucida Sans Unicode" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="campoPreco" layoutX="148.0" layoutY="217.0" prefHeight="44.0" prefWidth="465.0">
+      <TextField fx:id="campoPreco" layoutX="148.0" layoutY="217.0" prefHeight="44.0" prefWidth="465.0" promptText="R$">
          <font>
             <Font size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="campoEstoque" layoutX="148.0" layoutY="270.0" prefHeight="44.0" prefWidth="465.0">
+      <TextField fx:id="campoEstoque" layoutX="148.0" layoutY="270.0" prefHeight="44.0" prefWidth="465.0" promptText="Quantidade em Estoque">
          <font>
             <Font size="20.0" />
          </font>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senai.controller.PrincipalController">
    <left>
@@ -18,42 +18,52 @@
                   <Font name="Lucida Sans Unicode" size="36.0" />
                </font>
             </Label>
-            <Button fx:id="botaoUsuarios" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#abrirUsuarios" prefHeight="42.0" prefWidth="180.0" text="USUÁRIOS" textAlignment="CENTER" textFill="#695f5f">
+            <Button fx:id="botaoUsuarios" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#abrirUsuarios" prefHeight="42.0" prefWidth="180.0" text="USUÁRIOS" textAlignment="CENTER" textFill="#695f5f">
                <font>
                   <Font name="Lucida Sans Unicode" size="22.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button fx:id="botaoClientes" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#abrirClientes" prefHeight="42.0" prefWidth="180.0" text="CLIENTES" textAlignment="CENTER" textFill="#695f5f">
                <font>
                   <Font name="Lucida Sans Unicode" size="22.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button fx:id="botaoVendas" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#abrirVendas" prefHeight="42.0" prefWidth="180.0" text="VENDAS" textAlignment="CENTER" textFill="#695f5f">
                <font>
                   <Font name="Lucida Sans Unicode" size="22.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button fx:id="botaoProdutos" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#abrirProdutos" prefHeight="42.0" prefWidth="180.0" text="PRODUTOS" textAlignment="CENTER" textFill="#695f5f">
                <font>
                   <Font name="Lucida Sans Unicode" size="22.0" />
                </font>
-            </Button>
-            <Button fx:id="botaoSair" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#sair" prefHeight="42.0" prefWidth="180.0" text="SAIR" textAlignment="CENTER" textFill="#695f5f">
-               <font>
-                  <Font name="Lucida Sans Unicode" size="22.0" />
-               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <VBox VBox.vgrow="ALWAYS">
                <children>
-                  <Label alignment="CENTER" prefHeight="0.0" prefWidth="200.0" text="TODOS OS DIREITOS RESERVADOS ©" translateY="80.0" VBox.vgrow="NEVER">
+                  <Button fx:id="botaoSair" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#sair" prefHeight="42.0" prefWidth="180.0" text="SAIR" textAlignment="CENTER" textFill="#695f5f" translateY="80.0">
                      <font>
-                        <Font size="9.0" />
+                        <Font name="Lucida Sans Unicode" size="22.0" />
                      </font>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </Label>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
                </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
             </VBox>
          </children>
       </VBox>
