@@ -61,24 +61,24 @@
       </TableView>
       <TextField fx:id="campoLogradouro" editable="false" layoutX="127.0" layoutY="221.0">
          <font>
-            <Font size="7.0" />
+            <Font size="11.0" />
          </font>
       </TextField>
-      <TextField fx:id="campoBairro" editable="false" layoutX="127.0" layoutY="241.0">
+      <TextField fx:id="campoBairro" editable="false" layoutX="127.0" layoutY="245.0">
          <font>
-            <Font size="7.0" />
+            <Font size="11.0" />
          </font>
       </TextField>
-      <TextField fx:id="campoCidade" editable="false" layoutX="127.0" layoutY="264.0">
+      <TextField fx:id="campoCidade" editable="false" layoutX="127.0" layoutY="269.0">
          <font>
-            <Font size="7.0" />
+            <Font size="11.0" />
          </font>
       </TextField>
-      <TextField fx:id="campoUf" editable="false" layoutX="127.0" layoutY="288.0">
+      <TextField fx:id="campoUf" editable="false" layoutX="127.0" layoutY="295.0">
          <font>
-            <Font size="7.0" />
+            <Font size="11.0" />
          </font>
       </TextField>
-      <Label fx:id="labelMenssagem" layoutX="83.0" layoutY="320.0" prefHeight="18.0" prefWidth="278.0" />
+      <Label fx:id="labelMenssagem" layoutX="73.0" layoutY="326.0" prefHeight="18.0" prefWidth="278.0" />
    </children>
 </AnchorPane>
