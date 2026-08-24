@@ -72,9 +72,7 @@ public class PrincipalController {
     }
 
     @FXML
-    private void abrirClientes() {
-        System.out.println("Abrir tela de Clientes (ainda vamos construir)");
-    }
+    private void abrirClientes() {carregarConteudo("/fxml/clientes.fxml");}
 
     @FXML
     private void abrirVendas() {
