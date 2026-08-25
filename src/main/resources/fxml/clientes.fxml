@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="571.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senai.controller.ClienteController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senai.controller.ClienteController">
    <children>
       <Label layoutX="124.0" layoutY="14.0" text="CADASTRO DE  CLIENTES" textFill="#695f5f">
          <font>
@@ -21,12 +20,12 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="56.0" layoutY="145.0" text="CPF">
+      <Label layoutX="44.0" layoutY="145.0" text="CPF">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Label layoutX="59.0" layoutY="192.0" text="CEP">
+      <Label layoutX="43.0" layoutY="192.0" text="CEP">
          <font>
             <Font size="20.0" />
          </font>
