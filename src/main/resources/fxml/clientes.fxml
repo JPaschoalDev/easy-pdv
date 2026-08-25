@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senai.controller.ClienteController">
+<AnchorPane prefHeight="571.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senai.controller.ClienteController">
    <children>
       <Label layoutX="124.0" layoutY="14.0" text="CADASTRO DE  CLIENTES" textFill="#695f5f">
          <font>
@@ -79,6 +79,6 @@
             <Font size="11.0" />
          </font>
       </TextField>
-      <Label fx:id="labelMenssagem" layoutX="73.0" layoutY="326.0" prefHeight="18.0" prefWidth="278.0" />
+      <Label fx:id="labelMensagem" layoutX="73.0" layoutY="326.0" prefHeight="18.0" prefWidth="278.0" />
    </children>
 </AnchorPane>
