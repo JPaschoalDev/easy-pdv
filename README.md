@@ -1,4 +1,4 @@
-# Easy.PDV — Sistema de Vendas Educacional
+# Easy.PDV - Sistema de Vendas Educacional
 
 Sistema desktop de PDV (Ponto de Venda) desenvolvido em **Java 21 + JavaFX**, com persistência em **MySQL**, criado como projeto educacional (SENAI). O sistema cobre o fluxo completo de um pequeno comércio: login com controle de acesso, cadastro de produtos, cadastro de clientes (com preenchimento automático de endereço via API), registro de vendas com carrinho e baixa de estoque, e gerenciamento de usuários.
 
