@@ -5,52 +5,57 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senai.controller.LoginController">
+<AnchorPane prefHeight="670.0" prefWidth="630.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senai.controller.LoginController">
    <children>
-      <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="10.0" layoutX="84.0" layoutY="8.0" lineSpacing="2.0" prefHeight="18.0" prefWidth="232.0" text="Easy.PDV" textAlignment="CENTER" textFill="#695f5f" textOverrun="CENTER_ELLIPSIS">
+      <ImageView fitHeight="670.0" fitWidth="637.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/login.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="72.0" layoutY="323.0" text="SENHA" textFill="#00135e">
          <font>
-            <Font name="Lucida Sans Unicode" size="45.0" />
+            <Font name="Lucida Sans Unicode" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="31.0" layoutY="94.0" text="E-MAIL" textFill="#695f5f">
+      <TextField fx:id="campoEmail" layoutX="70.0" layoutY="238.0" prefHeight="51.0" prefWidth="511.0" promptText="Digite Seu E-mail">
          <font>
-            <Font name="Lucida Sans Unicode" size="15.0" />
-         </font>
-      </Label>
-      <Label layoutX="33.0" layoutY="150.0" text="SENHA" textFill="#695f5f">
-         <font>
-            <Font name="Lucida Sans Unicode" size="15.0" />
-         </font>
-      </Label>
-      <TextField fx:id="campoEmail" layoutX="97.0" layoutY="91.0" prefWidth="279.0" promptText="Digite Seu E-mail">
-         <font>
-            <Font size="15.0" />
+            <Font size="24.0" />
          </font>
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <PasswordField fx:id="campoSenha" layoutX="97.0" layoutY="147.0" prefHeight="26.0" prefWidth="279.0" promptText="Digite Sua Senha">
+      <PasswordField fx:id="campoSenha" layoutX="70.0" layoutY="363.0" prefHeight="51.0" prefWidth="511.0" promptText="Digite Sua Senha" text="**********">
          <font>
-            <Font size="15.0" />
+            <Font size="24.0" />
          </font>
          <cursor>
             <Cursor fx:constant="TEXT" />
          </cursor>
       </PasswordField>
-      <Label layoutX="94.0" layoutY="270.0" text="&quot;Você foca na venda, a gente fecha a conta!&quot;" textFill="#695f5f">
+      <Label layoutX="122.0" layoutY="627.0" text="&quot;Você foca na venda, a gente fecha a conta!&quot;" textFill="#00135e">
          <font>
-            <Font size="11.0" />
+            <Font name="Lucida Sans Unicode" size="18.0" />
          </font>
       </Label>
-      <Button fx:id="botaoEntrar" alignment="CENTER" layoutX="144.0" layoutY="206.0" mnemonicParsing="false" onAction="#autenticar" prefHeight="31.0" prefWidth="118.0" text="ENTRAR" textAlignment="CENTER" textFill="#695f5f">
+      <Button fx:id="botaoEntrar" alignment="CENTER" layoutX="378.0" layoutY="444.0" mnemonicParsing="false" onAction="#autenticar" prefHeight="51.0" prefWidth="203.0" text="ENTRAR" textAlignment="CENTER" textFill="#00135e">
          <font>
-            <Font name="Lucida Sans Unicode" size="14.0" />
+            <Font name="Lucida Sans Unicode" size="24.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
-      <Label fx:id="labelMensagemErro" alignment="CENTER" layoutX="58.0" layoutY="245.0" prefHeight="18.0" prefWidth="290.0" textAlignment="CENTER" textFill="RED" />
+      <Label fx:id="labelMensagemErro" alignment="CENTER" layoutX="33.0" layoutY="456.0" prefHeight="27.0" prefWidth="338.0" textAlignment="CENTER" textFill="#00135e" />
+      <Label layoutX="70.0" layoutY="198.0" text="E-MAIL" textFill="#00135e">
+         <font>
+            <Font name="Lucida Sans Unicode" size="24.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

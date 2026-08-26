@@ -7,18 +7,24 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="742.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senai.controller.VendasController">
+<AnchorPane prefHeight="670.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senai.controller.VendasController">
    <children>
-      <ComboBox fx:id="comboCliente" layoutX="14.0" layoutY="75.0" prefWidth="150.0" promptText="CLIENTES">
+      <ImageView fitHeight="670.0" fitWidth="642.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/vendas.png" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="comboCliente" layoutX="64.0" layoutY="128.0" prefHeight="33.0" prefWidth="502.0" promptText="CLIENTES">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </ComboBox>
-      <ComboBox fx:id="comboProduto" layoutX="204.0" layoutY="75.0" prefWidth="150.0" promptText="PRODUTOS">
+      <ComboBox fx:id="comboProduto" layoutX="64.0" layoutY="178.0" prefHeight="33.0" prefWidth="502.0" promptText="PRODUTOS">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -28,18 +34,13 @@
             <Font name="Lucida Sans Unicode" size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="campoQuantidade" layoutX="29.0" layoutY="331.0" prefHeight="26.0" prefWidth="174.0" promptText="QUANTIDADE DE PRODUTOS" />
-      <Label layoutX="204.0" layoutY="23.0" text="CADASTRAR VENDAS">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <Button fx:id="botaoAdicionar" layoutX="404.0" layoutY="358.0" mnemonicParsing="false" onAction="#adicionarProduto" text="ADICIONAR AO CARRINHO">
+      <TextField fx:id="campoQuantidade" layoutX="267.0" layoutY="225.0" prefHeight="38.0" prefWidth="97.0" promptText="QUANTIDADE DE PRODUTOS" text="QUANTIDADE" />
+      <Button fx:id="botaoAdicionar" layoutX="47.0" layoutY="283.0" mnemonicParsing="false" onAction="#adicionarProduto" text="ADICIONAR AO CARRINHO">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <TableView fx:id="tabelaCarrinho" layoutX="15.0" layoutY="408.0" prefHeight="235.0" prefWidth="536.0">
+      <TableView fx:id="tabelaCarrinho" layoutX="47.0" layoutY="317.0" prefHeight="277.0" prefWidth="536.0">
         <columns>
           <TableColumn fx:id="colunaProdutoCarrinho" prefWidth="75.0" text="PRODUTO" />
           <TableColumn fx:id="colunaQuantidade" prefWidth="75.0" text="QTD" />
@@ -50,14 +51,17 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <ComboBox fx:id="comboFormaPagamento" layoutX="380.0" layoutY="74.0" prefHeight="26.0" prefWidth="181.0" promptText="FORMA DE PAGAMENTO">
+      <ComboBox fx:id="comboFormaPagamento" layoutX="382.0" layoutY="225.0" prefHeight="38.0" prefWidth="184.0" promptText="FORMA DE PAGAMENTO">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
       </ComboBox>
-      <Label fx:id="labelValorTotal" layoutX="418.0" layoutY="312.0" prefHeight="18.0" prefWidth="105.0" />
-      <Label fx:id="labelMensagem" layoutX="15.0" layoutY="374.0" prefHeight="18.0" prefWidth="324.0" />
-      <Button fx:id="botaoCancelar" layoutX="45.0" layoutY="676.0" mnemonicParsing="false" onAction="#cancelarVenda" prefHeight="26.0" prefWidth="118.0" text="CANCELAR">
+      <Label fx:id="labelValorTotal" layoutX="328.0" layoutY="609.0" prefHeight="46.0" prefWidth="108.0" textFill="#2d9e1f">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Label fx:id="labelMensagem" layoutX="346.0" layoutY="283.0" prefHeight="25.0" prefWidth="239.0" />
+      <Button fx:id="botaoCancelar" layoutX="47.0" layoutY="613.0" mnemonicParsing="false" onAction="#cancelarVenda" prefHeight="26.0" prefWidth="118.0" text="CANCELAR" textFill="#00135e">
          <font>
             <Font size="17.0" />
          </font>
@@ -65,7 +69,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="botaoFinalizar" layoutX="367.0" layoutY="676.0" mnemonicParsing="false" onAction="#finalizarVenda" prefHeight="26.0" prefWidth="118.0" text="FINALIZAR">
+      <Button fx:id="botaoFinalizar" layoutX="465.0" layoutY="613.0" mnemonicParsing="false" onAction="#finalizarVenda" prefHeight="26.0" prefWidth="118.0" text="FINALIZAR" textFill="#00135e">
          <font>
             <Font size="17.0" />
          </font>

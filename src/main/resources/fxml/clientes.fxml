@@ -5,49 +5,47 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="571.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senai.controller.ClienteController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="670.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senai.controller.ClienteController">
    <children>
-      <Label layoutX="124.0" layoutY="14.0" text="CADASTRO DE  CLIENTES" textFill="#695f5f">
+      <ImageView fitHeight="670.0" fitWidth="630.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/clientes.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="32.0" layoutY="113.0" text="NOME" textFill="#00135e">
          <font>
-            <Font name="Lucida Sans Unicode" size="29.0" />
+            <Font name="Lucida Sans Unicode" size="20.0" />
          </font>
       </Label>
-      <Label layoutX="44.0" layoutY="95.0" text="NOME">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="44.0" layoutY="145.0" text="CPF">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="43.0" layoutY="192.0" text="CEP">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <TextField fx:id="campoNome" layoutX="124.0" layoutY="88.0" prefHeight="30.0" prefWidth="394.0" promptText="NOME DO CLIENTE">
+      <TextField fx:id="campoNome" layoutX="32.0" layoutY="143.0" prefHeight="44.0" prefWidth="567.0" promptText="NOME DO CLIENTE">
          <font>
             <Font size="20.0" />
          </font>
       </TextField>
-      <TextField fx:id="campoCpf" layoutX="124.0" layoutY="147.0" prefHeight="26.0" prefWidth="142.0" promptText="000.000.000-00" />
-      <TextField fx:id="campoCep" layoutX="127.0" layoutY="195.0" promptText="00000-000">
+      <TextField fx:id="campoCpf" layoutX="32.0" layoutY="220.0" prefHeight="44.0" prefWidth="184.0" promptText="000.000.000-00">
          <font>
-            <Font size="11.0" />
+            <Font size="18.0" />
+         </font></TextField>
+      <TextField fx:id="campoCep" layoutX="32.0" layoutY="300.0" prefHeight="44.0" prefWidth="184.0" promptText="00000-000">
+         <font>
+            <Font size="18.0" />
          </font>
       </TextField>
-      <Button fx:id="botaoBuscarCep" layoutX="274.0" layoutY="195.0" mnemonicParsing="false" onAction="#buscarCep" text="BUSCAR" />
-      <Button fx:id="botaoSalvar" layoutX="490.0" layoutY="304.0" mnemonicParsing="false" onAction="#salvarCliente" text="SALVAR">
+      <Button fx:id="botaoBuscarCep" layoutX="77.0" layoutY="355.0" mnemonicParsing="false" onAction="#buscarCep" prefHeight="33.0" prefWidth="94.0" text="BUSCAR" textFill="#00135e">
          <font>
-            <Font size="15.0" />
+            <Font name="Lucida Sans Unicode" size="14.0" />
+         </font></Button>
+      <Button fx:id="botaoSalvar" layoutX="502.0" layoutY="400.0" mnemonicParsing="false" onAction="#salvarCliente" prefHeight="44.0" prefWidth="94.0" text="SALVAR" textFill="#00135e">
+         <font>
+            <Font size="18.0" />
          </font>
       </Button>
-      <TableView fx:id="tabelaClientes" layoutX="16.0" layoutY="351.0" prefHeight="200.0" prefWidth="567.0">
+      <TableView fx:id="tabelaClientes" layoutX="32.0" layoutY="449.0" prefHeight="200.0" prefWidth="567.0">
         <columns>
           <TableColumn fx:id="colunaNome" prefWidth="75.0" text="NOME" />
           <TableColumn fx:id="colunaCpf" prefWidth="75.0" text="CPF" />
@@ -58,26 +56,36 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <TextField fx:id="campoLogradouro" editable="false" layoutX="127.0" layoutY="221.0">
+      <TextField fx:id="campoLogradouro" editable="false" layoutX="239.0" layoutY="300.0" prefHeight="33.0" prefWidth="153.0" text="Logradouro">
          <font>
-            <Font size="11.0" />
+            <Font size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="campoBairro" editable="false" layoutX="127.0" layoutY="245.0">
+      <TextField fx:id="campoBairro" editable="false" layoutX="239.0" layoutY="338.0" prefHeight="33.0" prefWidth="153.0" text="Bairro">
          <font>
-            <Font size="11.0" />
+            <Font size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="campoCidade" editable="false" layoutX="127.0" layoutY="269.0">
+      <TextField fx:id="campoCidade" editable="false" layoutX="407.0" layoutY="300.0" prefHeight="33.0" prefWidth="153.0" text="Cidade">
          <font>
-            <Font size="11.0" />
+            <Font size="14.0" />
          </font>
       </TextField>
-      <TextField fx:id="campoUf" editable="false" layoutX="127.0" layoutY="295.0">
+      <TextField fx:id="campoUf" editable="false" layoutX="407.0" layoutY="338.0" prefHeight="33.0" prefWidth="153.0" text="Estado">
          <font>
-            <Font size="11.0" />
+            <Font size="14.0" />
          </font>
       </TextField>
-      <Label fx:id="labelMensagem" layoutX="73.0" layoutY="326.0" prefHeight="18.0" prefWidth="278.0" />
+      <Label fx:id="labelMensagem" layoutX="224.0" layoutY="422.0" prefHeight="18.0" prefWidth="278.0" />
+      <Label layoutX="32.0" layoutY="187.0" text="CADASTRO DE PESSOA FÍSICA" textFill="#00135e">
+         <font>
+            <Font name="Lucida Sans Unicode" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="32.0" layoutY="264.0" text="CÓDIGO DE ENDEREÇO POSTAL" textFill="#00135e">
+         <font>
+            <Font name="Lucida Sans Unicode" size="20.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
