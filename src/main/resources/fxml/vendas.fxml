@@ -65,7 +65,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Button>
-      <Button fx:id="botaoFinalizar" layoutX="367.0" layoutY="676.0" mnemonicParsing="false" onAction="#finalizarvenda" prefHeight="26.0" prefWidth="118.0" text="FINALIZAR">
+      <Button fx:id="botaoFinalizar" layoutX="367.0" layoutY="676.0" mnemonicParsing="false" onAction="#finalizarVenda" prefHeight="26.0" prefWidth="118.0" text="FINALIZAR">
          <font>
             <Font size="17.0" />
          </font>

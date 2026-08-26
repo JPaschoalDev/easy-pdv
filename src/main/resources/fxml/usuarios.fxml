@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="564.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senai.controller.usuarios.Controller">
+<AnchorPane prefHeight="564.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.senai.controller.UsuarioController">
    <children>
       <Label layoutX="178.0" layoutY="14.0" text="CADASTRO DE USUARIOS" textFill="#695f5f">
          <font>
@@ -40,7 +40,7 @@
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Button>
-      <ComboBox layoutX="59.0" layoutY="231.0" prefHeight="26.0" prefWidth="286.0" promptText="TIPO DE USUARIO">
+      <ComboBox fx:id="comboPerfil" layoutX="59.0" layoutY="231.0" prefHeight="26.0" prefWidth="286.0" promptText="TIPO DE USUARIO">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></ComboBox>

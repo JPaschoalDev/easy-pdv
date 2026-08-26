@@ -16,7 +16,7 @@ public class PrincipalController {
     private Button botaoProdutos;
 
     @FXML
-    private Button botaoClientes;
+    private Button botaoClientes;  
 
     @FXML
     private Button botaoVendas;
