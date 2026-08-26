@@ -22,7 +22,7 @@
             <Font name="Lucida Sans Unicode" size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="campoEmail" layoutX="70.0" layoutY="238.0" prefHeight="51.0" prefWidth="511.0" promptText="Digite Seu E-mail">
+      <TextField fx:id="campoEmail" layoutX="70.0" layoutY="238.0" prefHeight="51.0" prefWidth="511.0" promptText="email@exemplo.com">
          <font>
             <Font size="24.0" />
          </font>
@@ -30,7 +30,7 @@
             <Cursor fx:constant="TEXT" />
          </cursor>
       </TextField>
-      <PasswordField fx:id="campoSenha" layoutX="70.0" layoutY="363.0" prefHeight="51.0" prefWidth="511.0" promptText="Digite Sua Senha" text="**********">
+      <PasswordField fx:id="campoSenha" layoutX="70.0" layoutY="363.0" prefHeight="51.0" prefWidth="511.0" promptText="* * * * * *">
          <font>
             <Font size="24.0" />
          </font>

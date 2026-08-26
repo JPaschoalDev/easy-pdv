@@ -21,6 +21,9 @@
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
             </ImageView>
             <Button fx:id="botaoUsuarios" alignment="CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#abrirUsuarios" prefHeight="50.0" prefWidth="102.0" text="USUÁRIOS" textAlignment="CENTER" textFill="#00135e" VBox.vgrow="NEVER">
                <font>
@@ -71,7 +74,7 @@
             </VBox>
          </children>
          <BorderPane.margin>
-            <Insets right="30.0" />
+            <Insets right="30.0" top="20.0" />
          </BorderPane.margin>
       </VBox>
    </left>
