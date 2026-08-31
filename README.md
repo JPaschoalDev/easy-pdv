@@ -264,6 +264,6 @@ Scripts disponíveis em `database/`:
 
 <div align="center">
 
-📚 *Projeto desenvolvido em dupla como atividade acadêmica do curso de **Análise e Desenvolvimento de Sistemas pelo SENAI CTTI.**
+###📚 Projeto desenvolvido em dupla como atividade acadêmica do curso de **Análise e Desenvolvimento de Sistemas pelo SENAI CTTI.**
 
 </div>
