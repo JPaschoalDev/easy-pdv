@@ -18,7 +18,7 @@
 
 ## 📖 Sobre o Projeto
 
-**Easy.PDV** é um sistema desktop de PDV (Ponto de Venda) desenvolvido em **Java 21 + JavaFX**, com persistência em **MySQL**, criado como projeto educacional no curso de **Aperfeiçoamento em Linguagem de Programação Java (SENAI)**.
+**Easy.PDV** é um sistema desktop de PDV (Ponto de Venda) desenvolvido em **Java 21 + JavaFX**, com persistência em **MySQL**, criado como projeto educacional no curso de **Análise e Desenvolvimento de Sistemas pelo SENAI CTTI**.
 
 O sistema cobre o fluxo completo de um pequeno comércio, do login ao fechamento da venda:
 
