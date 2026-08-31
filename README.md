@@ -1,14 +1,53 @@
-# Easy.PDV - Sistema de Vendas Educacional
+<div align="center">
 
-Sistema desktop de PDV (Ponto de Venda) desenvolvido em **Java 21 + JavaFX**, com persistência em **MySQL**, criado como projeto educacional (SENAI). O sistema cobre o fluxo completo de um pequeno comércio: login com controle de acesso, cadastro de produtos, cadastro de clientes (com preenchimento automático de endereço via API), registro de vendas com carrinho e baixa de estoque, e gerenciamento de usuários.
+# 🛒 Easy.PDV
 
+### Sistema de Vendas Online — Projeto Educacional
+
+*"Você foca na venda, a gente fecha a conta."*
+
+![Java](https://img.shields.io/badge/Java-21-orange?style=for-the-badge&logo=openjdk&logoColor=white)
+![JavaFX](https://img.shields.io/badge/JavaFX-21-blue?style=for-the-badge&logo=java&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-Build-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
+![Status](https://img.shields.io/badge/status-concluído-brightgreen?style=for-the-badge)
+
+</div>
+
+---
+
+## 📖 Sobre o Projeto
+
+**Easy.PDV** é um sistema desktop de PDV (Ponto de Venda) desenvolvido em **Java 21 + JavaFX**, com persistência em **MySQL**, criado como projeto educacional no curso de **Aperfeiçoamento em Linguagem de Programação Java (SENAI)**.
+
+O sistema cobre o fluxo completo de um pequeno comércio, do login ao fechamento da venda:
+
+- 🔐 Login com controle de acesso por perfil (Admin / Vendedor)
+- 📦 Cadastro de produtos com controle de estoque
+- 🧑‍🤝‍🧑 Cadastro de clientes com preenchimento automático de endereço via **API pública (ViaCEP)**
+- 💳 Registro de vendas com carrinho, múltiplas formas de pagamento e baixa de estoque transacional
+- 👥 Gerenciamento de usuários (exclusivo do Admin)
+
+Desenvolvido em dupla, com foco em boas práticas de arquitetura em camadas, regras de negócio isoladas do domínio e segurança básica (senhas com hash BCrypt, prevenção de SQL Injection via `PreparedStatement`).
+
+---
+
+## 📑 Sumário
+
+- [Diagrama de Caso de Uso](#-diagrama-de-caso-de-uso)
+- [Arquitetura do Projeto](#-arquitetura-do-projeto)
+- [Telas e Funcionalidades](#️-telas-e-funcionalidades)
+- [Regras de Negócio](#️-regras-de-negócio-resumo)
+- [Sacadas e Decisões de Design](#-sacadas-e-decisões-de-design)
+- [Modelo de Dados](#️-modelo-de-dados)
+- [Tecnologias Utilizadas](#️-tecnologias-utilizadas)
+- [Como Rodar](#️-como-rodar)
 
 ---
 
 ## 📐 Diagrama de Caso de Uso
 
 Este diagrama resume os dois perfis de acesso do sistema (Vendedor e Admin) e o que cada um pode fazer.
-
 
 ![Caso de uso](./caso-de-uso.png)
 
@@ -31,7 +70,7 @@ src/main/resources/
 └── database.properties (não versionado — veja "Como Rodar")
 ```
 
-**Por que essa separação?** Cada Controller só conhece a tela e delega tudo que é regra de negócio para o Model (ex.: `Produto.baixarEstoque()`, `Venda.adicionarItem()`) e tudo que é banco de dados para o DAO correspondente. Isso significa que a lógica de "não pode vender sem estoque", por exemplo, mora em um único lugar (`Produto`) e é reaproveitada tanto pela `Venda` quanto, indiretamente, pelo `VendasController` — sem duplicar validação em nenhuma tela.
+> 💡 **Por que essa separação?** Cada Controller só conhece a tela e delega tudo que é regra de negócio para o Model (ex.: `Produto.baixarEstoque()`, `Venda.adicionarItem()`) e tudo que é banco de dados para o DAO correspondente. Isso significa que a lógica de "não pode vender sem estoque", por exemplo, mora em um único lugar (`Produto`) e é reaproveitada tanto pela `Venda` quanto, indiretamente, pelo `VendasController` — sem duplicar validação em nenhuma tela.
 
 O `NavegadorApp` centraliza a troca de telas (`trocarTela`) e guarda o usuário logado em memória (um pequeno "estado global" da aplicação), evitando que cada Controller precise saber como abrir a próxima tela.
 
@@ -39,7 +78,7 @@ O `NavegadorApp` centraliza a troca de telas (`trocarTela`) e guarda o usuário 
 
 ## 🖥️ Telas e Funcionalidades
 
-### 1. Login
+### 1️⃣ Login
 
 Tela de entrada do sistema. Autenticação por e-mail e senha.
 
@@ -53,7 +92,7 @@ Tela de entrada do sistema. Autenticação por e-mail e senha.
 
 ---
 
-### 2. Tela Principal (Dashboard / Menu)
+### 2️⃣ Tela Principal (Dashboard / Menu)
 
 Tela "casca" do sistema: um menu lateral fixo com um `AnchorPane` central onde as outras telas são carregadas dinamicamente.
 
@@ -67,7 +106,7 @@ Tela "casca" do sistema: um menu lateral fixo com um `AnchorPane` central onde a
 
 ---
 
-### 3. Produtos
+### 3️⃣ Produtos
 
 Cadastro e listagem do catálogo de produtos vendidos.
 
@@ -79,14 +118,13 @@ Cadastro e listagem do catálogo de produtos vendidos.
 - Validação de números: se preço ou estoque não forem números válidos, mensagem de erro amigável (sem travar a aplicação com exception não tratada).
 - Tabela abaixo do formulário lista todos os produtos já cadastrados, atualizada automaticamente após cada salvamento.
 
-**Regra de negócio:** estoque **nunca** pode ser negativo — validado dentro da própria classe `Produto` (`setQuantidadeEstoque`), não na tela. Isso garante que a regra vale mesmo que, no futuro, outra tela ou outro processo tente alterar o estoque.
+> ⚠️ **Regra de negócio:** estoque **nunca** pode ser negativo — validado dentro da própria classe `Produto` (`setQuantidadeEstoque`), não na tela. Isso garante que a regra vale mesmo que, no futuro, outra tela ou outro processo tente alterar o estoque.
 
 ---
 
-### 4. Clientes
+### 4️⃣ Clientes
 
 Cadastro de clientes com preenchimento automático de endereço.
-
 
 ![Tela de Clientes](./src/main/resources/Images/ClientePrint.png)
 
@@ -99,10 +137,9 @@ Cadastro de clientes com preenchimento automático de endereço.
 
 ---
 
-### 5. Vendas
+### 5️⃣ Vendas
 
 A tela mais complexa do sistema: monta um carrinho em memória e só grava tudo no banco ao finalizar.
-
 
 ![Tela de Vendas](./src/main/resources/Images/VendasPrint.png)
 
@@ -115,11 +152,11 @@ A tela mais complexa do sistema: monta um carrinho em memória e só grava tudo 
 - **Finalizar Venda**: grava a venda inteira (cabeçalho + itens) numa única transação e persiste a baixa de estoque de cada produto envolvido.
 - **Cancelar Venda**: descarta o carrinho sem gravar nada no banco e recarrega as listas para desfazer a baixa de estoque "fantasma" que só existia em memória.
 
-**Regra de negócio central:** não é possível vender um produto sem estoque suficiente. Essa regra vive dentro de `Produto.baixarEstoque()` e é usada por `Venda.adicionarItem()` — a tela apenas chama esse método e mostra a mensagem de retorno, sem reimplementar a validação.
+> ⚠️ **Regra de negócio central:** não é possível vender um produto sem estoque suficiente. Essa regra vive dentro de `Produto.baixarEstoque()` e é usada por `Venda.adicionarItem()` — a tela apenas chama esse método e mostra a mensagem de retorno, sem reimplementar a validação.
 
 ---
 
-### 6. Usuários (exclusiva do Admin)
+### 6️⃣ Usuários <sup>*(exclusiva do Admin)*</sup>
 
 Cadastro de novos usuários do sistema (vendedores e administradores).
 
@@ -134,7 +171,7 @@ Cadastro de novos usuários do sistema (vendedores e administradores).
 
 ---
 
-## ⚙️ Regras de Negócio (resumo)
+## ⚖️ Regras de Negócio (resumo)
 
 | Regra | Onde é garantida |
 |---|---|
@@ -150,7 +187,7 @@ Cadastro de novos usuários do sistema (vendedores e administradores).
 
 ---
 
-## 💡 Sacadas e decisões de design
+## 💡 Sacadas e Decisões de Design
 
 Algumas decisões que valem a pena destacar, tomadas ao longo do desenvolvimento:
 
@@ -185,28 +222,48 @@ Scripts disponíveis em `database/`:
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Java 21**
-- **JavaFX 21** (interface gráfica, com telas em FXML/Scene Builder)
-- **MySQL** + **MySQL Connector/J** (persistência)
-- **jBCrypt** (hash de senha)
-- **org.json** (parsing do retorno da API ViaCEP)
-- **java.net.http.HttpClient** (cliente HTTP nativo do Java, para consumir a API)
-- **Maven** (gerenciamento de dependências e build)
+| Tecnologia | Uso no projeto |
+|---|---|
+| ☕ **Java 21** | Linguagem principal |
+| 🎨 **JavaFX 21** | Interface gráfica (telas em FXML, editadas no Scene Builder) |
+| 🐬 **MySQL** + **MySQL Connector/J** | Persistência de dados |
+| 🔒 **jBCrypt** | Hash de senha |
+| 📦 **org.json** | Parsing do retorno da API ViaCEP |
+| 🌐 **java.net.http.HttpClient** | Cliente HTTP nativo do Java, para consumir a API |
+| 🧰 **Maven** | Gerenciamento de dependências e build |
 
 ---
 
 ## ▶️ Como Rodar
 
-1. Clone o repositório e certifique-se de ter o **Java 21** e o **Maven** instalados.
-2. Crie o banco de dados executando o script `database/database.sql` no MySQL.
-3. (Opcional) Popule o banco com dados de teste executando `database/testes.sql`.
-4. Copie o arquivo `src/main/resources/database.properties.example` para `src/main/resources/database.properties` e preencha com sua senha real do MySQL.
-5. Rode a aplicação via Maven:
+**Pré-requisitos:** Java 21 e Maven instalados.
+
+1. **Clone o repositório**
+   ```bash
+   git clone <url-do-repositorio>
    ```
+2. **Crie o banco de dados** executando o script `database/database.sql` no MySQL.
+3. **(Opcional) Popule com dados de teste** executando `database/testes.sql`.
+4. **Configure as credenciais do banco:**
+   ```bash
+   cp src/main/resources/database.properties.example src/main/resources/database.properties
+   ```
+   Depois, edite o arquivo com sua senha real do MySQL.
+5. **Rode a aplicação via Maven:**
+   ```bash
    mvn clean javafx:run
    ```
-6. Use um dos logins de teste (se você rodou o `testes.sql`):
-    - **Admin:** `admin@sistemavendas.com` / `admin123`
-    - **Vendedor:** `carlos.lima@sistemavendas.com` / `vendedor123`
+6. **Faça login** com um dos usuários de teste (se você rodou o `testes.sql`):
+
+   | Perfil | E-mail | Senha |
+   |---|---|---|
+   | 👑 Admin | `admin@sistemavendas.com` | `admin123` |
+   | 🧑‍💼 Vendedor | `carlos.lima@sistemavendas.com` | `vendedor123` |
 
 ---
+
+<div align="center">
+
+📚 *Projeto desenvolvido em dupla como atividade acadêmica do curso de Aperfeiçoamento em Linguagem de Programação Java — SENAI.*
+
+</div>
